@@ -1,0 +1,26 @@
+{% extends "Blog/postPadre.html" %}
+{% load static %}
+<!-- psofjaosfjpasdofjpsaofjaposifjpasdofijapsdofijsdpfoijsfpoisdjfpoa-->
+{% block titulo %}
+ {{post.titulo}}
+{% endblock %}
+<!-- psofjaosfjpasdofjpsaofjaposifjpasdofijapsdofijsdpfoijsfpoisdjfpoa-->
+{% block subtitulo %}
+{{post.subtitulo}}
+{% endblock %}
+<!-- psofjaosfjpasdofjpsaofjaposifjpasdofijapsdofijsdpfoijsfpoisdjfpoa-->
+{% block autor %}
+{{post.nombre}}
+{% endblock %}
+
+
+{% block titular %}
+{% endblock %}
+<!-- psofjaosfjpasdofjpsaofjaposifjpasdofijapsdofijsdpfoijsfpoisdjfpoa-->
+{% block parrafo %}
+<p>{{post.contenido}}</p>
+
+
+<a href="{% url 'LISTAPOST' %}">Volver</a>
+
+{% endblock %}

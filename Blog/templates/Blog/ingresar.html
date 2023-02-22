@@ -1,0 +1,19 @@
+{% extends "Blog/padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+Ingrese los Datos.
+{% endblock %}
+
+{% block subtitulo %}
+<form action="" method="POST"> {% csrf_token %}
+
+    {{formulario.as_p}}
+    
+    <button type="submit">Iniciar Sesion</button>
+    
+    
+    </form>
+
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "Blog/padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+Agregue un Avatar
+{% endblock %}
+
+{% block subtitulo %}
+    <form action="" method="POST" enctype="multipart/form-data"> {% csrf_token %}
+
+    {{formulario.as_p}}
+    
+    <button type="submit">Editar</button>
+    
+    
+    </form>
+    
+
+{% endblock %}

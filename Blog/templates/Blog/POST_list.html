@@ -1,0 +1,35 @@
+{% extends "Blog/padre.html" %}
+{% load static %}
+{% block titulo %}
+Lista de POSTS
+{% endblock %}
+
+{% block subtitulo %}
+
+{% for POST in object_list %}
+<p>Titulo: {{POST.titulo}}</p>
+<p>Subtitulo: {{POST.subtitulo}}</p>
+<p>Nombre: {{POST.nombre}}</p>
+<p>Apellido: {{POST.apellido}}</p>
+<p>Contenido: Haga click en ver para leer este post</p>
+<a href="{% url 'DETALLEPOST' POST.id %}">ver post</a>
+{% if request.user.is_staff %}
+<a href="{% url 'ACTUALIZARPOST' POST.id %}">Editar</a>
+<a href="{% url 'BORRARPOST' POST.id %}">Eliminar</a>
+
+{% endif %}
+
+
+<div>
+<br>
+</div>
+
+
+{% endfor %}
+{% if request.user.is_staff %}
+<a href="{% url 'CREARPOST'  %}">Crea un POST</a>
+{% endif %}
+
+
+
+{% endblock %}

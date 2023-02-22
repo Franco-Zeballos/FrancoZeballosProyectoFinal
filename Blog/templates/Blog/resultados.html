@@ -1,0 +1,17 @@
+{% extends "Blog/padre.html" %}
+
+{% load static %}
+
+{% block subtitulo %}
+<body>
+    <br>
+        <p>Estamos buscando el POST: {{nombre}} </p>
+        {% for POST in posts %}
+
+        <p>Nombre: {{POST.nombre}} ..........
+        Apellido: {{POST.apellido}}  
+        </p>
+        {% endfor %}
+    </body>
+</body>
+{% endblock %}

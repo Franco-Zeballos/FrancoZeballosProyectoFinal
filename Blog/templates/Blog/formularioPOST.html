@@ -1,0 +1,20 @@
+{% extends "Blog/padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+Cree su POST
+{% endblock %}
+
+{% block subtitulo %}
+<form action="" method="POST"> {% csrf_token %}
+
+    {{formP.as_p}}
+    
+    <button type="submit">Editar</button>
+    
+    
+</form>
+    
+
+{% endblock %}

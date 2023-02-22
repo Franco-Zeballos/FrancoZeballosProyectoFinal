@@ -1,0 +1,31 @@
+{% extends "Blog/padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+Esta es La pagina principal
+{% endblock %}
+
+{% block subtitulo %}
+Proyecto Entrega Final
+<p>
+
+    {{mensaje}}    
+
+</p>
+
+{% endblock %}
+{% block barra %}
+<form action="/Blog/resultados/" method="GET">
+
+
+    <input type="" name="nombre" id="nombre">
+    <input type="submit" value="Buscar">
+
+
+
+</form>
+
+
+
+{% endblock %}
